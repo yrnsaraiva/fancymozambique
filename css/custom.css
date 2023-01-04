@@ -1,0 +1,278 @@
+html{
+    background: white;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+section {
+    padding-top: 5rem;
+    padding-bottom: 100px;
+}
+#custom-navbar{
+    height: 5rem;
+    background: url("../img/events_header.jpg") no-repeat center center;
+    background-size: cover;
+}
+img{
+    width: 100%;
+}
+
+.portfolio-item {
+    overflow: hidden;
+    position: relative;
+}
+.portfolio-item img,
+.portfolio-item .portfolio-overlay {
+    transition: all 0.4s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+}
+
+.portfolio-overlay h3,
+.portfolio-overlay h6 {
+    color: #fff;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+.hiden, #hiden1, #hiden2, #hiden3{
+    display: none;
+}
+
+/* SERVICE */
+.service {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.service::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 165, 0, 0.44);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+
+.service:hover::after {
+    width: 100%;
+    height: 100%;
+    background: orange;
+    z-index: -1;
+}
+
+.service:hover h5,
+.service:hover a,  .service:hover i{
+    color: white;
+    border-color: white;
+}
+
+.service:hover .iconbox {
+    /*background-color: rgb(128, 92, 0);*/
+    color: white;
+}
+
+
+.cta-btn{
+    font-size: 14px;
+    font-weight: bold;
+    border: solid 2px white;
+    color: white;
+    border-radius: 0;
+    background: transparent;
+    padding: 10px 30px;
+}
+.cta-btn:hover{
+    background: white;
+    color: black;
+}
+.cta-btn:active{
+    background: white;
+    color: black;
+}
+
+
+
+/* SECTION TITLE */
+.section-title {
+    margin-bottom: 60px;
+}
+.section-title h1{
+    background-image: url(../img/events_header.jpg);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: orange;
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bt_more{
+    font-size: 2rem;
+    font-weight: lighter;
+    cursor: pointer;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orange;
+}
+
+/* IMAGE ZOOM */
+.image-zoom {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+    transition: all ease .5s;
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+
+/* TEAM */
+.team-member-content {
+    background-color: orange;
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    width: calc(100% - 50px);
+    transform: translateX(-50%);
+    padding: 24px;
+    transition: all ease .5s;
+    opacity: 0;
+}
+
+.team-member:hover .team-member-content {
+    opacity: 1;
+    bottom: 24px;
+}
+
+#parceiros img{
+    width: 35%;
+}
+
+
+form .form-control {
+    border-radius: 0;
+}
+
+form .form-control:focus {
+    box-shadow: none;
+    border-color: orange;
+}
+
+#cta {
+    background-color: orange;
+}
+
+
+.footer-top {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer .footer-links a,
+footer .social-icons a {
+    color: #5c636a;
+}
+
+footer .social-icons a {
+    font-size: 24px;
+}
+
+footer .footer-links a {
+    display: block;
+    font-weight: 400;
+}
+
+footer .social-icons a:hover,
+footer .footer-links a:hover {
+    color: orange;
+}
+.footer img{
+    width: 20%;
+}
+
+
+.section-2{
+    background: url("../img/fancyfashionshow_bannerhome.jpg") no-repeat center center;
+    background-size: cover;
+    height: 22rem;
+}
+.section-2 h1{
+    font-weight: bold;
+    color: #5c636a;
+}
+
+.scroll-area{
+    scroll-snap-align: start;
+}
+
+
+.scroll-area:nth-of-type(1){
+    min-height: 100vh;
+    background: url("../img/fancyfashionshow_bannerhome.jpg") no-repeat center center;
+    background-size: cover;
+}
+.scroll-area:nth-of-type(2){
+    min-height: 100vh;
+    background: url("../img/WhatsApp Video 2022-12-31 at 16.54.02.gif") no-repeat center center;
+    background-size: cover;
+}
+.scroll-area:nth-of-type(3){
+    min-height: 100vh;
+    background: url("../img/gallery/FancyInternational_about_bn.jpg") no-repeat center center;
+    background-size: cover;
+}
+.scroll-area:nth-of-type(4){
+    height: 100vh;
+    background: url("../img/thomas-martinsen-vrQ8k59LQjE-unsplash.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+
